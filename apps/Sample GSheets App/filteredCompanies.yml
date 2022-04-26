@@ -1,0 +1,30 @@
+id: filteredCompanies
+type: datasource
+subtype: SqlTransformQuery
+resourceName: SQL Transforms
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: true
+    - query: >-
+        select * from {{ companiesQuery.data }} where {{
+        multiselect1.value.length == 0}} or category = ANY ({{
+        multiselect1.value}}) order by category
+    - privateParams: []
+    - triggersOnSuccess: []
+    - data: null
+    - showSuccessToaster: true
+    - triggersOnFailure: []
+    - confirmationMessage: null
+    - isFetching: false
+    - watchedParams: []
+    - timestamp: 0
+    - runWhenPageLoads: false
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryThrottleTime: '750'
+createdAt: 2018-09-20T08:08:33.866Z
