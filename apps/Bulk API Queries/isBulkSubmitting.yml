@@ -1,0 +1,7 @@
+id: isBulkSubmitting
+type: state
+subtype: State
+template:
+  ordered:
+    - value: null
+createdAt: 2019-04-27T01:19:58.929Z

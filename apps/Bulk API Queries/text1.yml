@@ -1,0 +1,33 @@
+id: text1
+type: widget
+subtype: TextWidget
+template:
+  ordered:
+    - horizontalAlign: left
+    - truncateOverflow: false
+    - verticalAlign: center
+    - scrollOverflow: false
+    - tooltipText: ''
+    - value: >-
+        # Bulk API queries
+
+
+        1. select the rows to submit on the table
+
+        2. click the submit button, and see the results at the result tables
+        below!
+    - style:
+        ordered: []
+    - renderAsHtml: true
+    - renderAsMarkdown: true
+style:
+  ordered: []
+position2:
+  position2:
+    height: 3
+    width: 5
+mobilePosition2:
+  position2:
+    height: 1
+    width: 3
+createdAt: 2019-04-27T00:41:02.884Z

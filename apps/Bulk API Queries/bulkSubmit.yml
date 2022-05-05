@@ -1,0 +1,70 @@
+id: bulkSubmit
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - lastReceivedFromResourceAt: null
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: "// see https://docs.tryretool.com/docs/scripting-retool for docs!\n\nconst rowsToSubmit = table1.selectedRow.data;\n\nsuccessfulSubmissions.setValue([])\nfailedSubmissions.setValue([])\nisBulkSubmitting.setValue(true)\n\nfunction submitSingleRow(row) {\n  return submitQuery.trigger({ additionalScope: { row } })\n}\n\nasync function bulkSubmit(rows) {\n  const successes = []\n  const errors = []\n  \n  for (let i = 0; i < rows.length; i++) {\n    const row = rows[i]\n  \tconsole.log('Running query for row', row);\n    \n    try {\n\t    const res = await submitSingleRow(row)\n      successes.push(Object.assign(row, { res }))\n      successfulSubmissions.setValue(successes)  \n    } catch (err) {\n      errors.push(Object.assign(row, { err }))\n     \tfailedSubmissions.setValue(errors)\n    }\n  }\n}\n\nbulkSubmit(rowsToSubmit)\n  .then(() => {\n  \tisBulkSubmitting.setValue(false)\n  \tutils.showNotification({ title: 'Finished bulk submit!', notificationType: 'success' })\n\t})"
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - privateParams: []
+    - triggersOnSuccess: []
+    - runWhenPageLoadsDelay: ''
+    - data: null
+    - importedQueryInputs:
+        ordered: []
+    - showSuccessConfetti: false
+    - isImported: false
+    - showSuccessToaster: false
+    - cacheKeyTtl: ''
+    - metadata: null
+    - triggersOnFailure: []
+    - changesetObject: ''
+    - errorTransformer: >-
+        // The variable 'data' allows you to reference the request's data in the
+        transformer. 
+
+        // example: return data.find(element => element.isError)
+
+        return data.error
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - runWhenPageLoads: false
+    - transformer: >-
+        // type your code here
+
+        // example: return formatDataAsArray(data).filter(row => row.quantity >
+        20)
+
+        return data
+    - events: []
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2019-04-27T00:51:36.480Z
