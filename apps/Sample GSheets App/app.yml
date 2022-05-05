@@ -1,4 +1,5 @@
 version: 43.0.9
 pageUuid: 0aa66c8e-c587-11ec-a92e-d77f0ee526de
 appTemplate:
+  rootScreen: null
   version: 2.29.11
