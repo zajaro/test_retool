@@ -1,0 +1,39 @@
+id: sendEmail
+type: datasource
+subtype: RESTQuery
+resourceName: onboarding_api
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - paginationLimit: ''
+    - body: >-
+        [{"key":"to","value":"{{
+        companiesTable.selectedRow.data.email}}"},{"key":"bcc","value":"{{bccInput.value}}"},{"key":"snippet","value":"{{personalizedInput.value}}"},{"key":"company_name","value":"{{
+        companiesTable.selectedRow.data.name }}"}]
+    - queryDisabledMessage: Please enter in a personalized snippet!
+    - successMessage: ''
+    - queryDisabled: '{{ !personalizedInput.value}}'
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - paginationPaginationField: ''
+    - headers: ''
+    - paginationEnabled: false
+    - query: emails/new
+    - privateParams: []
+    - triggersOnSuccess: []
+    - data: null
+    - showSuccessToaster: true
+    - cookies: ''
+    - triggersOnFailure: []
+    - confirmationMessage: null
+    - isFetching: false
+    - watchedParams: []
+    - paginationDataField: ''
+    - timestamp: 0
+    - runWhenPageLoads: false
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - type: POST
+    - bodyType: json
+    - queryThrottleTime: '750'
+createdAt: 2018-09-19T05:51:17.389Z

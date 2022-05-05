@@ -1,0 +1,135 @@
+id: companiesTable
+type: widget
+subtype: TableWidget
+template:
+  ordered:
+    - actionButtonQuery: ''
+    - actionButtonType: runQuery
+    - columnWidths:
+        - ordered:
+            - id: Title
+            - value: 250
+        - ordered:
+            - id: Sales
+            - value: 80
+    - actionButtonDisabled: ''
+    - columnWidthsMobile: []
+    - columnHeaderNames:
+        ordered: []
+    - alwaysShowPaginator: false
+    - columnColors:
+        ordered:
+          - address_id: ''
+          - active: ''
+          - created_at: ''
+          - quantity: ''
+          - image_url: ''
+          - name: ''
+          - Sales: orange
+          - sales: ''
+          - activebool: ''
+          - create_date: ''
+          - last_update: ''
+          - last_name: ''
+          - updated_at: ''
+          - Title: blue
+          - store_id: ''
+          - first_name: ''
+          - unit_price_cents: ''
+          - id: ''
+          - customer_id: ''
+          - email: ''
+          - Description: green
+          - category: ''
+    - allowMultiRowSelect: false
+    - columnFormats:
+        ordered: []
+    - actionButtonUrl: ''
+    - actionButton: false
+    - actionButtonNewWindow: false
+    - columnVisibility:
+        ordered:
+          - address_id: true
+          - active: true
+          - created_at: true
+          - quantity: true
+          - image_url: true
+          - name: true
+          - Sales: true
+          - sales: true
+          - activebool: true
+          - create_date: true
+          - last_update: true
+          - last_name: true
+          - updated_at: true
+          - Title: true
+          - store_id: true
+          - first_name: true
+          - unit_price_cents: true
+          - id: false
+          - customer_id: true
+          - email: true
+          - Description: true
+          - category: true
+    - selectedPageIndex: '0'
+    - serverPaginated: false
+    - data: '{{ filteredCompanies.data }}'
+    - selectRowByDefault: true
+    - defaultSortByColumn: ''
+    - paginationOffset: 0
+    - sortedDesc: false
+    - columnMappersRenderAsHTML:
+        ordered: []
+    - actionButtonInternalUrlPath: ''
+    - pageSize: 8
+    - selectedColumn: null
+    - sortedColumn: ''
+    - actionButtonText: ''
+    - columnAllowOverflow:
+        ordered: []
+    - onRowSelect: ''
+    - selectedIndex: ''
+    - totalRowCount: ''
+    - columnMappers:
+        ordered: []
+    - showClearSelection: false
+    - columns:
+        - Title
+        - Sales
+        - Description
+        - id
+        - name
+        - email
+        - sales
+        - customer_id
+        - store_id
+        - first_name
+        - last_name
+        - address_id
+        - activebool
+        - create_date
+        - last_update
+        - active
+        - quantity
+        - unit_price_cents
+        - created_at
+        - updated_at
+        - image_url
+        - category
+    - sort: null
+    - actionButtonInternalUrlQuery: ''
+    - selectedRow:
+        object:
+          index: null
+          data: null
+position2:
+  position2:
+    row: 3
+    height: 10
+    width: 7
+mobilePosition2:
+  position2:
+    row: 3
+    height: 9
+    width: 12
+createdAt: 2018-08-06T18:01:25.280Z

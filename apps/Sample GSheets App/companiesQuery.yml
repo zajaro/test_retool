@@ -1,0 +1,35 @@
+id: companiesQuery
+type: datasource
+subtype: GoogleSheetsQuery
+resourceName: Sample GSheets
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - queryDisabledMessage: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - resourceNameOverride: ''
+    - useRawSpreadsheetId: true
+    - runWhenModelUpdates: true
+    - spreadsheetId: 1jQKcJQRgjBNzr2ZlKHJOGzv7HwSHJZOiYV0wQ9sx2EI
+    - sheetUpdate: ''
+    - privateParams: []
+    - triggersOnSuccess: []
+    - sheetIdToCopy: ''
+    - data: null
+    - showSuccessToaster: true
+    - actionType: read
+    - triggersOnFailure: []
+    - confirmationMessage: null
+    - isFetching: false
+    - watchedParams: []
+    - useRawCopyToSpreadsheetId: false
+    - timestamp: 0
+    - copyToSpreadsheetId: ''
+    - runWhenPageLoads: false
+    - sheetTitle: ''
+    - queryTimeout: '10000'
+    - requireConfirmation: false
+    - sheetRange: A3:Z
+    - queryThrottleTime: '750'
+createdAt: 2018-09-17T20:07:05.926Z

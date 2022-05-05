@@ -1,0 +1,30 @@
+id: toInput
+type: widget
+subtype: TextInputWidget
+template:
+  ordered:
+    - readonly: 'true'
+    - disabledKeyCodes: ''
+    - docsSlug: textinput
+    - leftIconName: mail
+    - initialValue: '{{  companiesTable.selectedRow.data.email  }}'
+    - value: ''
+    - placeholder: Send to...
+    - label: 'To:'
+    - labelMaxWidth: ''
+    - onSubmit: ''
+    - type: text
+    - allowedRegex: .*
+    - required: ''
+position2:
+  position2:
+    row: 1
+    col: 7
+    height: 2
+    width: 5
+mobilePosition2:
+  position2:
+    row: 12
+    height: 2
+    width: 12
+createdAt: 2018-09-17T23:58:47.568Z
