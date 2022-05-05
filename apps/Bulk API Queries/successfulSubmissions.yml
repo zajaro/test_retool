@@ -1,0 +1,7 @@
+id: successfulSubmissions
+type: state
+subtype: State
+template:
+  ordered:
+    - value: '[]'
+createdAt: 2019-04-27T00:49:13.260Z

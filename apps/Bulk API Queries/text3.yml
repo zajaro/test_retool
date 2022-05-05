@@ -1,0 +1,29 @@
+id: text3
+type: widget
+subtype: TextWidget
+template:
+  ordered:
+    - horizontalAlign: left
+    - truncateOverflow: false
+    - verticalAlign: center
+    - scrollOverflow: false
+    - tooltipText: ''
+    - value: '<strong style="color: red;">Failed Submissions</strong>'
+    - style:
+        ordered: []
+    - renderAsHtml: true
+    - renderAsMarkdown: false
+style:
+  ordered: []
+position2:
+  position2:
+    row: 12
+    col: 6
+    height: 1
+    width: 3
+mobilePosition2:
+  position2:
+    row: 14
+    height: 1
+    width: 3
+createdAt: 2019-04-27T00:47:05.446Z
